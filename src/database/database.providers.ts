@@ -13,6 +13,9 @@ export const databaseProvider = [
         username: 'postgres',
         password: '1234',
         database: 'back_nest_angular',
+        synchronize: false,
+        logging: true,
+        entities: [__dirname + '/../**/*.entity{.ts,.js}'],
       });
 
       return dataSource.initialize();
